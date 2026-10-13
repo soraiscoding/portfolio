@@ -1,8 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowDownRight, ArrowUpRight, MoveUpRight, Menu } from 'lucide-react';
+import categoryIdeation from '../assets/category ideation.png';
 import rainFinalUi from '../assets/Final UI rainfit.png';
 import rainMainMockup from '../assets/main page mockup.png';
+import videoListIdeation from '../assets/video list ideation.png';
 import './styles.css';
 
 const projects = [
@@ -42,12 +44,12 @@ const projects = [
     number: '02',
     slug: 'rainfit',
     title: 'RainFit',
-    type: 'ONLINE FITNESS · PRODUCT DESIGN',
+    type: 'Mobile/IOS design',
     year: null,
     className: 'rain',
-    role: 'UX research · Product design · Accessibility',
+    role: 'UX research · Product design',
     overview: 'An online fitness app concept that helps beginners find a course, set achievable goals, and stay motivated with trainer guidance and community support.',
-    introduction: 'A proposed platform connecting learners with fitness instructors and guided courses. Its design direction makes course goals visible and turns progress into a clear, social journey.',
+    introduction: 'A proposed app connecting learners with fitness instructors and guided courses. Its design direction makes course goals visible and turns progress into a clear, social journey.',
     problem: 'People starting out can feel overwhelmed by the amount of fitness advice and similar courses online. Text-heavy lessons and exercising without social support can make it harder to stay motivated.',
     research: 'The research considered beginners with different goals, instructors building courses, and accessibility needs such as hearing loss. It also surfaced a need to make course milestones easy to compare and personal progress easy to follow.',
     persona: {
@@ -60,9 +62,13 @@ const projects = [
       scenario: 'After work, Stephen follows an instructor’s movements during a home workout, relying on visual guidance when audio instructions are unavailable. Later, he reads and shares experiences in the community, where encouragement from peers builds his confidence.'
     },
     design: 'The concept combines goal-based course discovery with instructor guidance, visible course milestones, learner-created sub-goals and progress tracking. Community features share encouragement and progress, while captions and vibration cues support people who are deaf or hard of hearing.',
-    testing: 'The supplied project notes do not describe completed usability tests. A next validation round should check whether beginners can find a suitable course, understand its milestones, and follow exercise instructions using captions and vibration cues.',
+    designImages: [
+      { src: categoryIdeation, alt: 'Category selection ideation comparing neutral buttons with colorful fitness category buttons.', caption: 'Category selection ideation' },
+      { src: videoListIdeation, alt: 'Video lesson list ideation comparing detailed descriptions with a more compact list and larger titles.', caption: 'Video list ideation' }
+    ],
+    testing: 'We tested our designs with our tutor through moderated usability testing. Our tutor was told to say all her thoughts aloud and we observed her interactions with the designs. We iterated on the designs based on her feedback. For example, we increased the default font size of captions on training videos so that it was easier to read and more acessible for people with disabilities.',
     finalUI: 'The dashboard concept brings a trainer’s plan, the next workout, milestone progress and community activity into one view, so learners can see what to do next and how far they have come.',
-    nextSteps: 'Test course discovery and recommendations with beginners and instructors, then refine the milestone and progress experience. Validate captions and vibration cues with people who have hearing impairments.',
+    nextSteps: "We didn't didn't actually discuss this with our tutor or amongst ourselves as we felt content with what we had created. Looking back, I think we should have brainstormed some extra features or improvements we could have implemented into the app just as a good exercise.",
     visual: <img className="rain-image rain-home-image" src={rainMainMockup} alt="Rain fitness app dashboard, course discovery and reviews shown on three phone screens." />,
     finalUIVisual: <img className="rain-image rain-final-image" src={rainFinalUi} alt="Rain fitness app onboarding, registration, dashboard, course discovery and reviews screens." />
   }
@@ -134,6 +140,12 @@ function CaseStudyPage({ project }) {
           <div className="case-chapter-copy">
             <h2>{section.title}</h2>
             <p>{section.body}</p>
+            {section.id === 'design' && project.designImages && <div className="design-ideation-gallery">
+              {project.designImages.map((image) => <figure key={image.src}>
+                <img src={image.src} alt={image.alt} />
+                <figcaption>{image.caption}</figcaption>
+              </figure>)}
+            </div>}
             {section.id === 'research' && project.persona && <div className="research-persona">
               <div className="research-persona-heading">
                 <div><span>USER PERSONA</span><h3>{project.persona.name}, {project.persona.age}</h3></div>
