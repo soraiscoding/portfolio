@@ -1,6 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowDownRight, ArrowUpRight, MoveUpRight, Menu } from 'lucide-react';
+import rainFinalUi from '../assets/Final UI rainfit.png';
+import rainMainMockup from '../assets/main page mockup.png';
 import './styles.css';
 
 const projects = [
@@ -61,16 +63,8 @@ const projects = [
     testing: 'The supplied project notes do not describe completed usability tests. A next validation round should check whether beginners can find a suitable course, understand its milestones, and follow exercise instructions using captions and vibration cues.',
     finalUI: 'The dashboard concept brings a trainer’s plan, the next workout, milestone progress and community activity into one view, so learners can see what to do next and how far they have come.',
     nextSteps: 'Test course discovery and recommendations with beginners and instructors, then refine the milestone and progress experience. Validate captions and vibration cues with people who have hearing impairments.',
-    visual: <div className="rain-visual">
-      <div className="rain-app">
-        <aside className="rain-sidebar"><strong className="rain-logo">Rain<span>Fit</span></strong><span className="rain-active">My plan</span><span>Explore courses</span><span>Community</span></aside>
-        <div className="rain-main">
-          <div className="rain-heading"><div><small>YOUR FITNESS JOURNEY</small><h3>Small steps add up.</h3></div><span className="rain-avatar">J</span></div>
-          <div className="rain-plan"><small>YOUR TRAINER PLAN</small><strong>Build a steady routine</strong><div className="rain-progress"><i/></div><div className="rain-progress-label"><span>2 of 6 milestones</span><b>33%</b></div></div>
-          <div className="rain-tiles"><div><small>UP NEXT</small><strong>Low-impact strength</strong><span>12 min · Beginner</span></div><div><small>YOUR COMMUNITY</small><strong>Keep going together</strong><span>See shared progress&nbsp; ↗</span></div></div>
-        </div>
-      </div>
-    </div>
+    visual: <img className="rain-image rain-home-image" src={rainMainMockup} alt="Rain fitness app dashboard, course discovery and reviews shown on three phone screens." />,
+    finalUIVisual: <img className="rain-image rain-final-image" src={rainFinalUi} alt="Rain fitness app onboarding, registration, dashboard, course discovery and reviews screens." />
   }
 ];
 
@@ -152,7 +146,7 @@ function CaseStudyPage({ project }) {
               </div>
               <blockquote><span>SCENARIO</span><p>{project.persona.scenario}</p></blockquote>
             </div>}
-            {section.id === 'final-ui' && <div className={`case-page-art ${project.className}`}>{project.visual}</div>}
+            {section.id === 'final-ui' && <div className={`case-page-art ${project.className}`}>{project.finalUIVisual || project.visual}</div>}
           </div>
         </section>)}
       </div>

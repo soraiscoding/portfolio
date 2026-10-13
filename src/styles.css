@@ -88,14 +88,7 @@ button { font: inherit; }
 .guessr-question { margin:7% 0 5%; }.guessr-question > span { color:#39805f; font-size:clamp(6px,.6vw,8px); font-weight:800; letter-spacing:.1em; }.guessr-question h3 { max-width:470px; margin:8px 0; color:#25352e; font:600 clamp(13px,1.6vw,22px)/1.25 Manrope,sans-serif; letter-spacing:-.03em; }.guessr-question p { margin:0; color:#758078; font-size:clamp(7px,.72vw,10px); }
 .guessr-answers { display:grid; gap:6px; }.guessr-answers div { min-height:30px; display:flex; align-items:center; gap:8px; padding:6px 8px; border:1px solid #e1e7e2; border-radius:3px; background:#fff; color:#48564e; font-size:clamp(7px,.72vw,10px); }.guessr-answers b { display:grid; place-items:center; width:17px; height:17px; flex-shrink:0; border-radius:3px; background:#f0f4f0; color:#5d6c62; font-size:.85em; }
 .guessr-score { display:flex; justify-content:space-between; margin-top:auto; padding-top:8px; color:#6d7c72; font-size:clamp(6px,.6vw,8px); font-weight:700; letter-spacing:.08em; }
-.rain-visual { height:100%; padding:7% 7% 0; overflow:hidden; background:#dbe8dc; }
-.rain-app { display:flex; height:100%; overflow:hidden; border:1px solid #d3ded4; border-bottom:0; border-radius:5px 5px 0 0; background:#f8faf7; color:#26392f; box-shadow:0 12px 30px #293a3020; }
-.rain-sidebar { width:24%; flex-shrink:0; display:flex; flex-direction:column; gap:14px; padding:8% 5%; background:#194d3d; color:#e8f1e9; font-size:8px; }
-.rain-logo { margin-bottom:18px; font:700 19px/1 Manrope,sans-serif; }.rain-logo span { color:#c7e47a; }.rain-active { margin:0 -6px; padding:8px 6px; border-radius:3px; background:#2c6652; }
-.rain-main { display:flex; flex:1; min-width:0; flex-direction:column; padding:5% 5%; }
-.rain-heading { display:flex; align-items:center; justify-content:space-between; margin-bottom:5%; }.rain-heading small,.rain-plan small,.rain-tiles small { display:block; color:#78877d; font-size:6px; font-weight:700; letter-spacing:.1em; }.rain-heading h3 { margin:5px 0 0; color:#20382d; font:600 16px/1.2 Manrope,sans-serif; letter-spacing:-.03em; }.rain-avatar { display:grid; place-items:center; width:24px; height:24px; flex-shrink:0; border-radius:50%; background:#dbe9dc; color:#315944; font-size:10px; font-weight:700; }
-.rain-plan { padding:11px 12px; border:1px solid #e2e8df; border-radius:4px; background:#fff; }.rain-plan > strong { display:block; margin-top:6px; font-size:11px; }.rain-progress { height:5px; margin-top:12px; overflow:hidden; border-radius:5px; background:#e7ede6; }.rain-progress i { display:block; width:33%; height:100%; background:#5e9c6d; }.rain-progress-label { display:flex; justify-content:space-between; margin-top:6px; color:#738078; font-size:7px; }.rain-progress-label b { color:#3a6f4a; }
-.rain-tiles { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-top:8px; }.rain-tiles > div { display:flex; min-width:0; flex-direction:column; gap:6px; padding:9px; border:1px solid #e2e8df; border-radius:4px; background:#fff; }.rain-tiles strong { font-size:8px; line-height:1.3; }.rain-tiles span { color:#758178; font-size:6px; }
+.rain-image { display:block; width:100%; height:100%; object-fit:contain; background:#f2edf8; }
 .local { background:#f4d3b5; }
 .local-visual { height:100%; position:relative; background:#f2d1b1; overflow:hidden; display:flex; justify-content:center; align-items:center; }
 .coffee-poster { width:58%; height:90%; background:#f7e8d5; position:relative; padding:6% 7%; box-shadow:0 15px 40px #7a4a2c20; transform:rotate(-3deg); }
@@ -166,6 +159,7 @@ button { font: inherit; }
 .research-persona blockquote p { margin-top:8px; font-size:.87rem; line-height:1.8; }
 .case-page-art { width:100%; height:clamp(320px,42vw,560px); margin:32px 0 0; overflow:hidden; border-radius:3px; }
 .case-page-art > div { width:100%; height:100%; }
+.case-page-art.rain { height:auto; aspect-ratio:1366 / 781; }
 .next-case { display:flex; flex-direction:column; gap:18px; width:min(85.8%,1200px); margin:25px auto 90px; padding:34px 4.5%; background:#e8e7df; }
 .next-case .eyebrow { display:flex; align-items:center; gap:8px; }
 .next-case strong { font:500 clamp(1.8rem,4vw,3.3rem)/1.1 Manrope,sans-serif; letter-spacing:-.06em; }
