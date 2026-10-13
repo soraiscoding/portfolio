@@ -6,42 +6,82 @@ import './styles.css';
 const projects = [
   {
     number: '01',
-    slug: 'making-money-feel-simpler',
-    title: 'Making money feel simpler',
-    type: 'PRODUCT DESIGN · FINTECH',
-    year: '2025',
-    className: 'fintech',
-    role: 'Product designer · UX research · UI design',
-    overview: 'A mobile banking concept designed to make everyday spending easier to understand, helping people feel more confident about their money.',
-    challenge: 'People often know how much money they have, but struggle to understand where it goes. Financial dashboards can feel dense, overly technical and difficult to act on.',
-    approach: 'I focused on the everyday questions people ask about their finances. I simplified the information hierarchy, brought spending patterns forward and used plain language to make key actions easier to find.',
-    outcome: 'A calmer dashboard concept that prioritises balance, spending trends and useful next steps without overwhelming the user.',
-    visual: <div className="finance-visual">
-      <div className="phone phone-back"><div className="phone-top" /><span className="tiny-label">TOTAL SAVINGS</span><strong>$8,420<span>.50</span></strong><div className="mini-chart"><i/><i/><i/><i/><i/><i/><i/><i/><i/></div><div className="mock-row"><b>●</b><span>Everyday account</span><strong>$2,340</strong></div></div>
-      <div className="phone phone-front"><div className="phone-top" /><div className="app-greeting">Good morning, Alex <span>✳</span></div><div className="balance-label">YOUR BALANCE</div><div className="balance">$4,860<span>.20</span></div><div className="balance-pill">↑ 12.4% this month</div><div className="spend-head">Spending <span>•••</span></div><div className="spend-bars"><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/></div><div className="mock-row"><b className="orange">↗</b><span>Groceries</span><strong>$86.40</strong></div><div className="mock-row"><b className="purple">⌂</b><span>Home</span><strong>$420.00</strong></div></div>
-      <div className="floating-sticker">A little more<br/>financial clarity <span>↗</span></div>
+    slug: 'confluence-guessr',
+    title: 'ConfluenceGuessr',
+    type: 'ATLASSIAN FORGE APP · PRODUCT DESIGN',
+    year: '2026',
+    className: 'confluence-guessr',
+    role: 'Research · UI/UX design · Frontend development (React)',
+    overview: 'A responsive Confluence app that turns reviewing pages and spaces into a guessing game, helping teams practise where useful information lives.',
+    introduction: 'A Forge app for Confluence’s Global Page where users choose pages or spaces, guess the source of excerpts or images, and review answers with links back to the source. Scoring, a leaderboard and asynchronous team games add a social layer.',
+    problem: 'As Confluence spaces grow, employees can spend time re-reading pages to find information and struggle to remember where it lives, adding friction to day-to-day work.',
+    research: 'Research highlighted the effort of recalling where information lives and the extra time spent re-reading pages. We looked at Kahoot for its points, leaderboard and team play, and Anki for simple, self-paced review with links back to source material.',
+    design: 'We designed a Confluence Forge app where people choose pages or spaces they can access, then identify the source of an excerpt or image. Speed-based points, a leaderboard and asynchronous team games bring a playful, social layer to review.',
+    testing: 'We tested the experience with the client and tutor during demos, then iterated on the designs using their feedback. The work was developed by a five-person team, which also meant coordinating around a new technology for most of the group.',
+    finalUI: 'The game view keeps the question, source choices, round progress and score together, with navigation to review answers and the leaderboard.',
+    nextSteps: 'Next, validate how easily people can choose relevant pages and spaces, and whether the scoring and asynchronous team mode make review more engaging over time.',
+    visual: <div className="guessr-visual">
+      <div className="guessr-window">
+        <div className="guessr-topbar"><span className="guessr-mark">C</span><strong>ConfluenceGuessr</strong><span className="guessr-space-label">PRODUCT HANDBOOK</span><span className="guessr-avatar">R</span></div>
+        <div className="guessr-layout">
+          <aside className="guessr-sidebar"><small>YOUR SPACE</small><strong>Product handbook</strong><span className="active">Play a round</span><span>Review answers</span><span>Leaderboard</span></aside>
+          <div className="guessr-game">
+            <div className="guessr-game-meta"><span>ROUND 03 OF 10</span><strong>00:18</strong></div>
+            <div className="guessr-progress"><i/></div>
+            <div className="guessr-question"><span>GUESS THE SOURCE</span><h3>“Clear goals help teams make better decisions.”</h3><p>Which page is this excerpt from?</p></div>
+            <div className="guessr-answers"><div><b>A</b>Product principles</div><div><b>B</b>Design research archive</div><div><b>C</b>Quarterly planning</div></div>
+            <div className="guessr-score"><span>+ 850 PTS</span><span>STREAK 03</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   },
   {
     number: '02',
-    slug: 'a-better-way-to-discover',
-    title: 'A better way to discover',
-    type: 'WEB DESIGN · BRAND',
-    year: '2025',
-    className: 'discover',
-    role: 'Product designer · Information architecture · Visual design',
-    overview: 'A fresh web experience that helps people discover relevant ideas, products and inspiration without getting lost in a crowded interface.',
-    challenge: 'The original experience made it hard to understand what was available or where to begin. The design needed to feel distinctive while making the first step obvious.',
-    approach: 'I created a clear content hierarchy, used a strong editorial headline to establish the tone, and paired playful art direction with simple navigation and a focused primary action.',
-    outcome: 'A more memorable landing page concept that gives the brand a recognisable visual voice while making exploration feel straightforward.',
-    visual: <div className="discover-visual"><div className="browser-bar"><span/><span/><span/><small>goodthings.studio</small></div><div className="discover-inner"><div className="discover-nav">GOOD THINGS <span>MENU&nbsp; ☰</span></div><div className="discover-copy">Find your<br/><em>next thing.</em><p>Small discoveries. Big inspiration.</p><button>Explore the collection ↗</button></div><div className="sun-shape">✳</div><div className="shape-card shape-one">GOOD<br/>IDEAS</div><div className="shape-card shape-two">✷</div><div className="shape-card shape-three">NEW<br/>FAVOURITES</div></div></div>
+    slug: 'rainfit',
+    title: 'RainFit',
+    type: 'ONLINE FITNESS · PRODUCT DESIGN',
+    year: null,
+    className: 'rain',
+    role: 'UX research · Product design · Accessibility',
+    overview: 'An online fitness app concept that helps beginners find a course, set achievable goals, and stay motivated with trainer guidance and community support.',
+    introduction: 'A proposed platform connecting learners with fitness instructors and guided courses. Its design direction makes course goals visible and turns progress into a clear, social journey.',
+    problem: 'People starting out can feel overwhelmed by the amount of fitness advice and similar courses online. Text-heavy lessons and exercising without social support can make it harder to stay motivated.',
+    research: 'The research considered beginners with different goals, instructors building courses, and accessibility needs such as hearing loss. It also surfaced a need to make course milestones easy to compare and personal progress easy to follow.',
+    persona: {
+      name: 'Stephen',
+      age: 30,
+      profile: 'Single, independent UI designer; confident with technology; uses an iPhone; has hearing loss.',
+      goals: 'Exercise at home to manage stress and build self-confidence. Create a fitness plan, receive professional guidance, work toward regular exercise targets, and connect with fitness enthusiasts who also have hearing loss.',
+      accessNeeds: 'Captions for spoken instructions and vibration alerts for movement cues.',
+      challenges: 'During complex movements Stephen can miss voice instructions. If his focus moves away from the screen, he may repeat the previous movement. Completing a target gives him a sense of satisfaction.',
+      scenario: 'After work, Stephen follows an instructor’s movements during a home workout, relying on visual guidance when audio instructions are unavailable. Later, he reads and shares experiences in the community, where encouragement from peers builds his confidence.'
+    },
+    design: 'The concept combines goal-based course discovery with instructor guidance, visible course milestones, learner-created sub-goals and progress tracking. Community features share encouragement and progress, while captions and vibration cues support people who are deaf or hard of hearing.',
+    testing: 'The supplied project notes do not describe completed usability tests. A next validation round should check whether beginners can find a suitable course, understand its milestones, and follow exercise instructions using captions and vibration cues.',
+    finalUI: 'The dashboard concept brings a trainer’s plan, the next workout, milestone progress and community activity into one view, so learners can see what to do next and how far they have come.',
+    nextSteps: 'Test course discovery and recommendations with beginners and instructors, then refine the milestone and progress experience. Validate captions and vibration cues with people who have hearing impairments.',
+    visual: <div className="rain-visual">
+      <div className="rain-app">
+        <aside className="rain-sidebar"><strong className="rain-logo">Rain<span>Fit</span></strong><span className="rain-active">My plan</span><span>Explore courses</span><span>Community</span></aside>
+        <div className="rain-main">
+          <div className="rain-heading"><div><small>YOUR FITNESS JOURNEY</small><h3>Small steps add up.</h3></div><span className="rain-avatar">J</span></div>
+          <div className="rain-plan"><small>YOUR TRAINER PLAN</small><strong>Build a steady routine</strong><div className="rain-progress"><i/></div><div className="rain-progress-label"><span>2 of 6 milestones</span><b>33%</b></div></div>
+          <div className="rain-tiles"><div><small>UP NEXT</small><strong>Low-impact strength</strong><span>12 min · Beginner</span></div><div><small>YOUR COMMUNITY</small><strong>Keep going together</strong><span>See shared progress&nbsp; ↗</span></div></div>
+        </div>
+      </div>
+    </div>
   }
 ];
 
+function caseStudyHref(slug) {
+  return `${import.meta.env.BASE_URL}case-studies/${slug}`;
+}
+
 function CaseStudy({ project }) {
   return <article className="case-study" id={`case-study-${project.number}`}>
-    <div className="project-title-row"><h3><a href={`/case-studies/${project.slug}`}>{project.title}</a></h3></div>
-    <a className="project-art" href={`/case-studies/${project.slug}`} aria-label={`Read the ${project.title} case study`}>
+    <div className="project-title-row"><h3><a href={caseStudyHref(project.slug)}>{project.title}</a></h3></div>
+    <a className="project-art" href={caseStudyHref(project.slug)} aria-label={`Read the ${project.title} case study`}>
       {project.visual}
       <span className="project-open"><ArrowUpRight size={20}/></span>
     </a>
@@ -50,7 +90,7 @@ function CaseStudy({ project }) {
 }
 
 function SiteHeader({ detail, menuOpen, onToggleMenu, onNavigate }) {
-  const home = detail ? '/' : '';
+  const home = detail ? import.meta.env.BASE_URL : '';
   return <header className="site-header">
     <a className="wordmark" href={`${home}#top`} aria-label="Your Name home">Richard Zhou</a>
     <button className="mobile-menu" onClick={onToggleMenu} aria-label="Toggle navigation"><Menu size={22}/></button>
@@ -62,52 +102,80 @@ function SiteHeader({ detail, menuOpen, onToggleMenu, onNavigate }) {
 }
 
 function SiteFooter({ detail }) {
-  return <footer className="site-footer"><a className="wordmark" href={detail ? '/#top' : '#top'}>Richard Zhou</a><div><a href="mailto:hello@example.com">EMAIL</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></footer>;
+  return <footer className="site-footer"><a className="wordmark" href={detail ? `${import.meta.env.BASE_URL}#top` : '#top'}>Richard Zhou</a><div><a href="mailto:hello@example.com">EMAIL</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></footer>;
 }
 
 function CaseStudyPage({ project }) {
-  const chapters = [
-    { label: '01 / THE CHALLENGE', title: 'Start with the real friction.', body: project.challenge },
-    { label: '02 / THE APPROACH', title: 'Make the experience clearer.', body: project.approach },
-    { label: '03 / THE OUTCOME', title: 'A more considered experience.', body: project.outcome }
+  const sections = [
+    { id: 'introduction', title: 'Introduction', body: project.introduction },
+    { id: 'problem', title: 'Problem', body: project.problem },
+    { id: 'research', title: 'Research', body: project.research },
+    { id: 'design', title: 'Design', body: project.design },
+    { id: 'testing', title: 'Testing', body: project.testing },
+    { id: 'final-ui', title: 'Final UI', body: project.finalUI },
+    { id: 'next-steps', title: 'Next Steps', body: project.nextSteps }
   ];
   const projectIndex = projects.indexOf(project);
   const nextProject = projects[(projectIndex + 1) % projects.length];
 
   return <main className="case-page" id="top">
-    <div className="case-page-intro">
-      <a className="case-back-link" href="/#work"><ArrowDownRight size={16}/> ALL CASE STUDIES</a>
-      <p className="eyebrow case-page-kicker">{project.type} <span>·</span> {project.year}</p>
-      <h1>{project.title}</h1>
-      <p className="case-page-lede">{project.overview}</p>
-      <div className="case-page-meta">
-        <div><span>MY ROLE</span><strong>{project.role}</strong></div>
-        <div><span>PROJECT</span><strong>{project.type}</strong></div>
-        <div><span>YEAR</span><strong>{project.year}</strong></div>
+    <aside className="case-toc" aria-label="Case study sections">
+      <p>ON THIS PAGE</p>
+      <nav>{sections.map((section) => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}</nav>
+    </aside>
+    <div className="case-page-content">
+      <div className="case-page-intro">
+        <a className="case-back-link" href={`${import.meta.env.BASE_URL}#work`}><ArrowDownRight size={16}/> ALL CASE STUDIES</a>
+        <p className="eyebrow case-page-kicker">{project.type}{project.year && <> <span>·</span> {project.year}</>}</p>
+        <h1>{project.title}</h1>
+        <p className="case-page-lede">{project.overview}</p>
+        <div className={project.year ? 'case-page-meta' : 'case-page-meta no-year'}>
+          <div><span>MY ROLE</span><strong>{project.role}</strong></div>
+          <div><span>PROJECT</span><strong>{project.type}</strong></div>
+          {project.year && <div><span>YEAR</span><strong>{project.year}</strong></div>}
+        </div>
       </div>
+      <div className="case-study-sections">
+        {sections.map((section) => <section className="case-chapter" id={section.id} key={section.id}>
+          <div className="case-chapter-copy">
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+            {section.id === 'research' && project.persona && <div className="research-persona">
+              <div className="research-persona-heading">
+                <div><span>USER PERSONA</span><h3>{project.persona.name}, {project.persona.age}</h3></div>
+                <p>{project.persona.profile}</p>
+              </div>
+              <div className="research-persona-details">
+                <div><h4>Goals</h4><p>{project.persona.goals}</p></div>
+                <div><h4>Accessibility needs</h4><p>{project.persona.accessNeeds}</p></div>
+                <div><h4>Challenges</h4><p>{project.persona.challenges}</p></div>
+              </div>
+              <blockquote><span>SCENARIO</span><p>{project.persona.scenario}</p></blockquote>
+            </div>}
+            {section.id === 'final-ui' && <div className={`case-page-art ${project.className}`}>{project.visual}</div>}
+          </div>
+        </section>)}
+      </div>
+      <a className="next-case" href={caseStudyHref(nextProject.slug)}>
+        <span className="eyebrow">NEXT CASE STUDY <ArrowUpRight size={14}/></span>
+        <strong>{nextProject.title}</strong>
+      </a>
     </div>
-    <div className={`case-page-art ${project.className}`}>{project.visual}</div>
-    <div className="case-chapters">
-      {chapters.map((chapter) => <section className="case-chapter" key={chapter.label}>
-        <div className="case-chapter-label"><span>{chapter.label}</span><span className="chapter-mark">✳</span></div>
-        <div className="case-chapter-copy"><h2>{chapter.title}</h2><p>{chapter.body}</p></div>
-      </section>)}
-    </div>
-    <a className="next-case" href={`/case-studies/${nextProject.slug}`}>
-      <span className="eyebrow">NEXT CASE STUDY <ArrowUpRight size={14}/></span>
-      <strong>{nextProject.title}</strong>
-    </a>
   </main>;
 }
 
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const projectSlug = window.location.pathname.replace(/\/$/, '').split('/').pop();
-  const selectedProject = window.location.pathname.startsWith('/case-studies/')
+  const basePath = import.meta.env.BASE_URL;
+  const appPath = window.location.pathname.startsWith(basePath)
+    ? `/${window.location.pathname.slice(basePath.length)}`
+    : window.location.pathname;
+  const projectSlug = appPath.replace(/\/$/, '').split('/').pop();
+  const selectedProject = appPath.startsWith('/case-studies/')
     ? projects.find(project => project.slug === projectSlug)
     : null;
 
-  if (selectedProject) return <div className="site-shell">
+  if (selectedProject) return <div className="site-shell case-study-shell">
     <SiteHeader detail menuOpen={menuOpen} onToggleMenu={() => setMenuOpen(!menuOpen)} onNavigate={() => setMenuOpen(false)}/>
     <CaseStudyPage project={selectedProject}/>
     <SiteFooter detail/>
@@ -122,13 +190,6 @@ function App() {
         <div className="case-study-list">{projects.map(project => <CaseStudy key={project.number} project={project}/>)}</div>
       </section>
 
-
-      <section className="hero">
-        <div className="availability"><span className="availability-dot"/> AVAILABLE FOR SELECT PROJECTS</div>
-        <h1>Thoughtful design<br/>for <span>real life.</span></h1>
-        <div className="hero-bottom"><p>I’m a digital designer who turns complex problems into clear, useful and delightful experiences through research, thoughtful UX and considered visual design.</p><a href="#work" className="scroll-link">SCROLL TO EXPLORE <ArrowDownRight size={17}/></a></div>
-        <div className="hero-mark" aria-hidden="true"><span>✳</span><small>DESIGN WITH<br/>INTENTION</small></div>
-      </section>
 
       <section id="about" className="about-section">
         <div className="about-label"><span className="eyebrow">ABOUT ME</span><span className="about-star">✳</span></div>
