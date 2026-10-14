@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { ArrowDownRight, ArrowUpRight, MoveUpRight, Menu } from 'lucide-react';
 import categoryIdeation from '../assets/category ideation.png';
 import confluenceHomePage from '../assets/final ui home page.png';
+import finalDesignQuestionExcerpt from '../assets/final design question excerpt type.png';
+import finalDesignQuestionReview from '../assets/final design question review.png';
 import imageQuestion from '../assets/image question.png';
 import designDecisionKahoot from '../assets/design decision kahoot.png';
 import designDecisionNative from '../assets/design decision native.png';
@@ -70,7 +72,9 @@ const projects = [
     </div>,
     finalUIImages: [
       { src: confluenceHomePage, alt: 'ConfluenceGuessr home page with game settings and a Start game button.', caption: 'Final UI: Home page' },
-      { src: imageQuestion, alt: 'ConfluenceGuessr image question round with a visual clue, answer options, timer, and score.', caption: 'Final UI: Image question' }
+      { src: imageQuestion, alt: 'ConfluenceGuessr image question round with a visual clue, answer options, timer, and score.', caption: 'Final UI: Image question' },
+      { src: finalDesignQuestionExcerpt, alt: 'ConfluenceGuessr final text question showing an excerpt from a Confluence page and answer options.', caption: 'Final UI: Excerpt question' },
+      { src: finalDesignQuestionReview, alt: 'ConfluenceGuessr final question review screen showing answers and their source pages.', caption: 'Final UI: Question review' }
     ],
     nextStepsImages: [
       { src: win98StartSolo, alt: 'Windows 98-inspired ConfluenceGuessr start screen with solo game settings.', caption: 'Windows 98 concept: Start a solo game' },
