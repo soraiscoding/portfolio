@@ -27,7 +27,7 @@ const projects = [
     number: '01',
     slug: 'confluence-guessr',
     title: 'ConfluenceGuessr',
-    type: 'Atlassian Forge app',
+    type: 'Atlassian Forge app · Responsive web',
     year: '2026',
     timeline: 'Jun - Aug 2026',
     className: 'confluence-guessr',
