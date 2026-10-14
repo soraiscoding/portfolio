@@ -51,7 +51,7 @@ const projects = [
       { src: designDecisionKahoot, alt: 'Design decision slide explaining how Kahoot-style gamification can make reviewing information more engaging.', caption: 'Design decision: Gamified review' }
     ],
     design: 'We designed a Confluence Forge app, over the course of three sprints (Demo A, Demo B and Demo C/final Demo), where people choose pages or spaces they can access, then identify the source of an excerpt or image. Speed-based points, a leaderboard and asynchronous team games bring a playful, social layer to the reviewing process.',
-    designNote: 'Before creating Demo A, most of our effort went into research and documentation: understanding the problem and target user, then deciding how to approach the project. The early demo was deliberately primitive; we focused first on the two essential game screens—the start screen and question screen—to establish the core flow.',
+    designNote: 'For Demo A, most of our effort went into research and documentation: understanding the problem and target user, then deciding how to approach the project. The early demo was deliberately primitive; we focused first on the two essential game screens—the start screen and question screen—to establish the core flow.',
     designImages: [
       { src: demoAStartScreen, alt: 'ConfluenceGuessr Demo A start screen with question count, game mode, space selection, and a Start game button.', caption: 'Demo A: Start screen' },
       { src: demoAQuestionScreen, alt: 'ConfluenceGuessr Demo A question screen showing a source-guessing question and answer choices.', caption: 'Demo A: Question screen' }
