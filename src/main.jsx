@@ -2,9 +2,24 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowDownRight, ArrowUpRight, MoveUpRight, Menu } from 'lucide-react';
 import categoryIdeation from '../assets/category ideation.png';
+import confluenceHomePage from '../assets/final ui home page.png';
+import imageQuestion from '../assets/image question.png';
+import designDecisionKahoot from '../assets/design decision kahoot.png';
+import designDecisionNative from '../assets/design decision native.png';
+import demoAQuestionScreen from '../assets/demo a question screen.png';
+import demoAStartScreen from '../assets/demo a start screen.png';
+import demoBHomePage from '../assets/demo b home page.png';
+import demoBQuestionReview from '../assets/demo b question review.png';
+import demoBQuestionScreen from '../assets/demo b question screen.png';
+import demoBScoreboard from '../assets/demo b scoreboard.png';
+import moscowUniResearch from '../assets/moscow uni research.png';
 import rainFinalUi from '../assets/Final UI rainfit.png';
 import rainMainMockup from '../assets/main page mockup.png';
 import videoListIdeation from '../assets/video list ideation.png';
+import win98GeneratingQuestions from '../assets/win98_confluence generating questions.png';
+import win98QuestionReview from '../assets/win98_confluence question review.png';
+import win98QuestionScreen from '../assets/win98_confluence question screen.png';
+import win98StartSolo from '../assets/win98_confluence start solo screen.png';
 import './styles.css';
 
 const projects = [
@@ -12,33 +27,57 @@ const projects = [
     number: '01',
     slug: 'confluence-guessr',
     title: 'ConfluenceGuessr',
-    type: 'ATLASSIAN FORGE APP · PRODUCT DESIGN',
+    type: 'Atlassian Forge app',
     year: '2026',
+    timeline: 'Jun - Aug 2026',
     className: 'confluence-guessr',
     role: 'Research · UI/UX design · Frontend development (React)',
-    overview: 'A responsive Confluence app that turns reviewing pages and spaces into a guessing game, helping teams practise where useful information lives.',
+    overview: 'A responsive Confluence app that turns reviewing pages and spaces into a guessing game, helping teams review and remember where useful information lives.',
     introduction: 'A Forge app for Confluence’s Global Page where users choose pages or spaces, guess the source of excerpts or images, and review answers with links back to the source. Scoring, a leaderboard and asynchronous team games add a social layer.',
     problem: 'As Confluence spaces grow, employees can spend time re-reading pages to find information and struggle to remember where it lives, adding friction to day-to-day work.',
-    research: 'Research highlighted the effort of recalling where information lives and the extra time spent re-reading pages. We looked at Kahoot for its points, leaderboard and team play, and Anki for simple, self-paced review with links back to source material.',
-    design: 'We designed a Confluence Forge app where people choose pages or spaces they can access, then identify the source of an excerpt or image. Speed-based points, a leaderboard and asynchronous team games bring a playful, social layer to review.',
-    testing: 'We tested the experience with the client and tutor during demos, then iterated on the designs using their feedback. The work was developed by a five-person team, which also meant coordinating around a new technology for most of the group.',
-    finalUI: 'The game view keeps the question, source choices, round progress and score together, with navigation to review answers and the leaderboard.',
-    nextSteps: 'Next, validate how easily people can choose relevant pages and spaces, and whether the scoring and asynchronous team mode make review more engaging over time.',
-    visual: <div className="guessr-visual">
-      <div className="guessr-window">
-        <div className="guessr-topbar"><span className="guessr-mark">C</span><strong>ConfluenceGuessr</strong><span className="guessr-space-label">PRODUCT HANDBOOK</span><span className="guessr-avatar">R</span></div>
-        <div className="guessr-layout">
-          <aside className="guessr-sidebar"><small>YOUR SPACE</small><strong>Product handbook</strong><span className="active">Play a round</span><span>Review answers</span><span>Leaderboard</span></aside>
-          <div className="guessr-game">
-            <div className="guessr-game-meta"><span>ROUND 03 OF 10</span><strong>00:18</strong></div>
-            <div className="guessr-progress"><i/></div>
-            <div className="guessr-question"><span>GUESS THE SOURCE</span><h3>“Clear goals help teams make better decisions.”</h3><p>Which page is this excerpt from?</p></div>
-            <div className="guessr-answers"><div><b>A</b>Product principles</div><div><b>B</b>Design research archive</div><div><b>C</b>Quarterly planning</div></div>
-            <div className="guessr-score"><span>+ 850 PTS</span><span>STREAK 03</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    targetUser: 'Recently onboarded employees that use Confluence who struggle to remember where compnay documentation lives.',
+    solution: 'A Forge app that turns reviewing pages and spaces into a guessing game, helping people remember where useful information lives.',
+    research: 'Research highlighted the effort of recalling where information lives and the extra time spent re-reading pages. It specifically asked people to find a new piece of information in different environments with the most simple environment using no context clues and only providing the documentation. The final environment provided page numbers, page breaks, thumbnails for the pages as well as scrolling. The findings of the study showed that the environment with the most context clues led to the best performance/efficiency and quickest time when looking for a piece of information in the given documentation.',
+    researchImage: {
+      src: moscowUniResearch,
+      alt: 'Moscow University research slide comparing information retrieval efficiency across document navigation methods. Paging and thumbnails scored highest.',
+      caption: 'Moscow University study on navigation context and information retrieval.'
+    },
+    researchContinuation: 'So, we decided on making our Forge game app have as many context clues as possible with clues, links to the source page a quote or image is from, the ability to review questions (at the end) and see what you got right and wrong and most importantly we wanted to keep everything within Confluence Forge (as it would help with remembering documenation if everything is localised in Confluence). We also looked at relevant technologies and products that solved a similar problem. looked at Kahoot for its points, leaderboard and team play, and Anki for simple, self-paced review with links back to source material.',
+    researchImages: [
+      { src: designDecisionNative, alt: 'Design decision slide explaining why ConfluenceGuessr should be native to Confluence and run within Forge.', caption: 'Design decision: Native to Confluence' },
+      { src: designDecisionKahoot, alt: 'Design decision slide explaining how Kahoot-style gamification can make reviewing information more engaging.', caption: 'Design decision: Gamified review' }
+    ],
+    design: 'We designed a Confluence Forge app, over the course of three sprints (Demo A, Demo B and Demo C/final Demo), where people choose pages or spaces they can access, then identify the source of an excerpt or image. Speed-based points, a leaderboard and asynchronous team games bring a playful, social layer to the reviewing process.',
+    designNote: 'Before creating Demo A, most of our effort went into research and documentation: understanding the problem and target user, then deciding how to approach the project. The early demo was deliberately primitive; we focused first on the two essential game screens—the start screen and question screen—to establish the core flow.',
+    designImages: [
+      { src: demoAStartScreen, alt: 'ConfluenceGuessr Demo A start screen with question count, game mode, space selection, and a Start game button.', caption: 'Demo A: Start screen' },
+      { src: demoAQuestionScreen, alt: 'ConfluenceGuessr Demo A question screen showing a source-guessing question and answer choices.', caption: 'Demo A: Question screen' }
+    ],
+    designFeedback: 'Usability testing with our Atlassian mentor and university class tutor led us to add an info button explaining how to play, a question review for answers, and a way to return to the start screen.',
+    designFeedbackImages: [
+      { src: demoBHomePage, alt: 'ConfluenceGuessr Demo B home screen with game settings and an information button.', caption: 'Demo B: Home screen' },
+      { src: demoBQuestionScreen, alt: 'ConfluenceGuessr Demo B question screen with answer choices and a way back to the start screen.', caption: 'Demo B: Question screen' },
+      { src: demoBScoreboard, alt: 'ConfluenceGuessr Demo B final scoreboard with player rankings and scores.', caption: 'Demo B: Scoreboard' },
+      { src: demoBQuestionReview, alt: 'ConfluenceGuessr Demo B question review screen showing questions and review controls.', caption: 'Demo B: Question review' }
+    ],
+    testing: 'We tested the experience with the client and tutor during demos, then iterated on the designs using their feedback. The work was developed by a five-person team, which also meant I (as team leader) had to coordinate the team around a new technology for most of the group.',
+    finalUI: 'The final UI standardised the fonts (after comments from our class tutor mentioned inconsistencies in the ui) and overall cleaned everything and made sure all the buttons worked as expected. We also cleaned the AI question generation function to use less credits and take less time to generate the questions. Image-based guessing rounds was also fixed successfully.',
+    nextSteps: 'We wanted to implement themes such as a Windows 98-inspired design concept for the app, which would have been a fun and nostalgic way to present the game. We also discussed multiple times the idea of using Rovo AI which is the AI model native to Forge to ensure that when we generated questions that it would be more security friendly as data wouldn’t be leaving the Atlassian ecosystem. Finally, we also wanted to implement a team mode where multiple people could play together asynchronously, but we didn’t have time to implement this feature.',
+    visual: <div className="laptop-mockup">
+      <div className="laptop-screen"><img src={confluenceHomePage} alt="" /></div>
+      <div className="laptop-base"><span /></div>
+    </div>,
+    finalUIImages: [
+      { src: confluenceHomePage, alt: 'ConfluenceGuessr home page with game settings and a Start game button.', caption: 'Final UI: Home page' },
+      { src: imageQuestion, alt: 'ConfluenceGuessr image question round with a visual clue, answer options, timer, and score.', caption: 'Final UI: Image question' }
+    ],
+    nextStepsImages: [
+      { src: win98StartSolo, alt: 'Windows 98-inspired ConfluenceGuessr start screen with solo game settings.', caption: 'Windows 98 concept: Start a solo game' },
+      { src: win98GeneratingQuestions, alt: 'Windows 98-inspired ConfluenceGuessr question generation loading screen.', caption: 'Windows 98 concept: Generating questions' },
+      { src: win98QuestionScreen, alt: 'Windows 98-inspired ConfluenceGuessr text question screen with answer options.', caption: 'Windows 98 concept: Question screen' },
+      { src: win98QuestionReview, alt: 'Windows 98-inspired ConfluenceGuessr question review screen.', caption: 'Windows 98 concept: Question review' }
+    ]
   },
   {
     number: '02',
@@ -46,11 +85,14 @@ const projects = [
     title: 'RainFit',
     type: 'Mobile/IOS design',
     year: null,
+    timeline: 'Jun - Aug 2022',
     className: 'rain',
     role: 'UX research · Product design',
     overview: 'An online fitness app concept that helps beginners find a course, set achievable goals, and stay motivated with trainer guidance and community support.',
     introduction: 'A proposed app connecting learners with fitness instructors and guided courses. Its design direction makes course goals visible and turns progress into a clear, social journey.',
     problem: 'People starting out can feel overwhelmed by the amount of fitness advice and similar courses online. Text-heavy lessons and exercising without social support can make it harder to stay motivated.',
+    targetUser: 'Beginners in fitness who want to exercise at home.',
+    solution: 'Create an iPhone app that helps beginners find an easy to follow course, set achievable goals, and stay motivated with trainer guidance and community support.',
     research: 'The research considered beginners with different goals, instructors building courses, and accessibility needs such as hearing loss. It also surfaced a need to make course milestones easy to compare and personal progress easy to follow.',
     persona: {
       name: 'Stephen',
@@ -58,7 +100,7 @@ const projects = [
       profile: 'Single, independent UI designer; confident with technology; uses an iPhone; has hearing loss.',
       goals: 'Exercise at home to manage stress and build self-confidence. Create a fitness plan, receive professional guidance, work toward regular exercise targets, and connect with fitness enthusiasts who also have hearing loss.',
       accessNeeds: 'Captions for spoken instructions and vibration alerts for movement cues.',
-      challenges: 'During complex movements Stephen can miss voice instructions. If his focus moves away from the screen, he may repeat the previous movement. Completing a target gives him a sense of satisfaction.',
+      challenges: 'During complex movements Stephen can miss voice instructions. If his focus moves away from the screen, he may repeat the previous movement.',
       scenario: 'After work, Stephen follows an instructor’s movements during a home workout, relying on visual guidance when audio instructions are unavailable. Later, he reads and shares experiences in the community, where encouragement from peers builds his confidence.'
     },
     design: 'The concept combines goal-based course discovery with instructor guidance, visible course milestones, learner-created sub-goals and progress tracking. Community features share encouragement and progress, while captions and vibration cues support people who are deaf or hard of hearing.',
@@ -105,10 +147,21 @@ function SiteFooter({ detail }) {
   return <footer className="site-footer"><a className="wordmark" href={detail ? `${import.meta.env.BASE_URL}#top` : '#top'}>Richard Zhou</a><div><a href="mailto:hello@example.com">EMAIL</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></footer>;
 }
 
+function ImageGallery({ images }) {
+  return <div className="case-image-gallery">
+    {images.map((image) => <figure key={image.src}>
+      <img src={image.src} alt={image.alt} />
+      <figcaption>{image.caption}</figcaption>
+    </figure>)}
+  </div>;
+}
+
 function CaseStudyPage({ project }) {
   const sections = [
     { id: 'introduction', title: 'Introduction', body: project.introduction },
     { id: 'problem', title: 'Problem', body: project.problem },
+    { id: 'target-user', title: 'Target User', body: project.targetUser },
+    { id: 'solution', title: 'Solution', body: project.solution },
     { id: 'research', title: 'Research', body: project.research },
     { id: 'design', title: 'Design', body: project.design },
     { id: 'testing', title: 'Testing', body: project.testing },
@@ -129,10 +182,10 @@ function CaseStudyPage({ project }) {
         <p className="eyebrow case-page-kicker">{project.type}{project.year && <> <span>·</span> {project.year}</>}</p>
         <h1>{project.title}</h1>
         <p className="case-page-lede">{project.overview}</p>
-        <div className={project.year ? 'case-page-meta' : 'case-page-meta no-year'}>
+        <div className="case-page-meta">
           <div><span>MY ROLE</span><strong>{project.role}</strong></div>
-          <div><span>PROJECT</span><strong>{project.type}</strong></div>
-          {project.year && <div><span>YEAR</span><strong>{project.year}</strong></div>}
+          <div><span>PROJECT TYPE</span><strong>{project.type}</strong></div>
+          <div><span>TIMELINE</span><strong>{project.timeline}</strong></div>
         </div>
       </div>
       <div className="case-study-sections">
@@ -140,12 +193,14 @@ function CaseStudyPage({ project }) {
           <div className="case-chapter-copy">
             <h2>{section.title}</h2>
             <p>{section.body}</p>
-            {section.id === 'design' && project.designImages && <div className="design-ideation-gallery">
-              {project.designImages.map((image) => <figure key={image.src}>
-                <img src={image.src} alt={image.alt} />
-                <figcaption>{image.caption}</figcaption>
-              </figure>)}
-            </div>}
+            {section.id === 'research' && project.researchImage && <>
+              <figure className="research-image">
+                <img src={project.researchImage.src} alt={project.researchImage.alt} />
+                <figcaption>{project.researchImage.caption}</figcaption>
+              </figure>
+              <p className="research-continuation">{project.researchContinuation}</p>
+            </>}
+            {section.id === 'design' && project.designImages && <ImageGallery images={project.designImages} />}
             {section.id === 'research' && project.persona && <div className="research-persona">
               <div className="research-persona-heading">
                 <div><span>USER PERSONA</span><h3>{project.persona.name}, {project.persona.age}</h3></div>
@@ -158,7 +213,14 @@ function CaseStudyPage({ project }) {
               </div>
               <blockquote><span>SCENARIO</span><p>{project.persona.scenario}</p></blockquote>
             </div>}
-            {section.id === 'final-ui' && <div className={`case-page-art ${project.className}`}>{project.finalUIVisual || project.visual}</div>}
+            {section.id === 'design' && project.designNote && <p className="design-note">{project.designNote}</p>}
+            {section.id === 'design' && project.designFeedback && <p className="design-note design-feedback">{project.designFeedback}</p>}
+            {section.id === 'design' && project.designFeedbackImages && <ImageGallery images={project.designFeedbackImages} />}
+            {section.id === 'research' && project.researchImages && <ImageGallery images={project.researchImages} />}
+            {section.id === 'final-ui' && (project.finalUIImages
+              ? <ImageGallery images={project.finalUIImages} />
+              : <div className={`case-page-art ${project.className}`}>{project.finalUIVisual || project.visual}</div>)}
+            {section.id === 'next-steps' && project.nextStepsImages && <ImageGallery images={project.nextStepsImages} />}
           </div>
         </section>)}
       </div>
@@ -199,7 +261,7 @@ function App() {
 
       <section id="about" className="about-section">
         <div className="about-label"><span className="eyebrow">ABOUT ME</span><span className="about-star">✳</span></div>
-        <div className="about-content"><h2>Curious by nature.<br/><span>Intentional by design.</span></h2><p>I care about the details, but never lose sight of the bigger picture. My process blends curiosity, clear thinking and a healthy dose of collaboration to make digital experiences that feel as good as they function.</p><a href="mailto:hello@example.com" className="text-link">A bit more about me <ArrowUpRight size={16}/></a></div>
+        <div className="about-content"><h2>Richard Zhou<br/></h2><p><b>Computer Science student focused on UI/UX and user-centered design.</b> <br/> I like to cook, hike, play tennis and piano in my spare time. I have about 2 years of experience working at restaurants (both front of house and back of house) and at university I have taught Japanese and volunteered in various programs (predominantly to do giving food away).</p><a href="mailto:hello@example.com" className="text-link">A bit more about me <ArrowUpRight size={16}/></a></div>
       </section>
     </main>
 

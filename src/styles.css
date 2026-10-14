@@ -120,6 +120,13 @@ button { font: inherit; }
 .case-study .project-title-row h3 { font-size:clamp(1.5rem,2.5vw,2.35rem); }
 .case-study .project-art { order:1; width:100%; height:auto; aspect-ratio:1.3; position:relative; }
 .case-study .project-art > div { width:100%; height:100%; }
+.case-study .project-art > img { display:block; width:100%; height:100%; object-fit:contain; background:#f2f2f2; }
+.laptop-mockup { display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; padding:5% 7% 4%; background:#e5e7e4; }
+.laptop-screen { position:relative; width:100%; max-width:680px; aspect-ratio:16 / 10; padding:8px 8px 9px; border:1px solid #292b2e; border-radius:8px 8px 2px 2px; background:#25272b; box-shadow:0 12px 24px #1f292b30; }
+.laptop-screen::before { position:absolute; top:2px; left:50%; width:3px; height:3px; border-radius:50%; background:#60656a; content:''; }
+.laptop-screen img { display:block; width:100%; height:100%; object-fit:contain; background:#fff; }
+.laptop-base { position:relative; width:106%; height:12px; flex:0 0 12px; clip-path:polygon(0 0,100% 0,96% 100%,4% 100%); border-radius:0 0 8px 8px; background:#adb1b2; }
+.laptop-base span { position:absolute; bottom:3px; left:41%; width:18%; height:3px; border-radius:0 0 5px 5px; background:#969b9d; }
 .case-study .project-open { opacity:1; transform:none; }
 .case-study .case-study-overview { order:2; max-width:480px; margin:16px 0 0; color:#65665e; font-size:.9rem; line-height:1.75; }
 .case-study-shell { --case-sidebar-width:clamp(200px,18vw,250px); max-width:none; margin:0; padding-left:var(--case-sidebar-width); overflow:visible; }
@@ -135,7 +142,7 @@ button { font: inherit; }
 .case-page-kicker span { color:#a4bd69; padding:0 3px; }
 .case-page-intro h1 { max-width:900px; margin:0; font:500 clamp(3.4rem,8vw,7.2rem)/.98 Manrope,sans-serif; letter-spacing:-.075em; }
 .case-page-lede { max-width:660px; margin:25px 0 45px; color:#65665e; font-size:1.08rem; line-height:1.8; }
-.case-page-meta { display:grid; grid-template-columns:1.4fr 1fr .55fr; gap:25px; max-width:900px; border-top:1px solid var(--line); padding-top:17px; }.case-page-meta.no-year { grid-template-columns:1.4fr 1fr; }
+.case-page-meta { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:25px; max-width:900px; border-top:1px solid var(--line); padding-top:17px; }
 .case-page-meta div { display:flex; flex-direction:column; gap:9px; }
 .case-page-meta span { color:#77786f; font-size:.6rem; font-weight:700; letter-spacing:.11em; }
 .case-page-meta strong { font-size:.8rem; font-weight:500; line-height:1.5; }
@@ -157,12 +164,16 @@ button { font: inherit; }
 .research-persona-details p { font-size:.84rem; line-height:1.75; }
 .research-persona blockquote { margin:0; padding:20px 0 4px 16px; border-left:2px solid #9bb65e; }
 .research-persona blockquote p { margin-top:8px; font-size:.87rem; line-height:1.8; }
-.design-ideation-gallery { display:grid; gap:24px; margin-top:30px; }
-.design-ideation-gallery figure { margin:0; padding-bottom:18px; border-bottom:1px solid var(--line); }
-.design-ideation-gallery img { display:block; width:100%; height:auto; }
-.design-ideation-gallery figcaption { margin-top:9px; color:var(--muted); font-size:.75rem; line-height:1.5; }
+.research-image { margin:26px 0; }
+.research-image img { display:block; width:100%; height:auto; }
+.research-image figcaption { margin-top:8px; color:var(--muted); font-size:.75rem; line-height:1.5; }
+.case-image-gallery { display:grid; gap:24px; margin-top:30px; }
+.case-image-gallery figure { margin:0; padding-bottom:18px; border-bottom:1px solid var(--line); }
+.case-image-gallery img { display:block; width:100%; height:auto; }
+.case-image-gallery figcaption { margin-top:9px; color:var(--muted); font-size:.75rem; line-height:1.5; }
 .case-page-art { width:100%; height:clamp(320px,42vw,560px); margin:32px 0 0; overflow:hidden; border-radius:3px; }
 .case-page-art > div { width:100%; height:100%; }
+.case-page-art > img { display:block; width:100%; height:100%; object-fit:contain; }
 .case-page-art.rain { height:auto; aspect-ratio:1366 / 781; }
 .next-case { display:flex; flex-direction:column; gap:18px; width:min(85.8%,1200px); margin:25px auto 90px; padding:34px 4.5%; background:#e8e7df; }
 .next-case .eyebrow { display:flex; align-items:center; gap:8px; }
