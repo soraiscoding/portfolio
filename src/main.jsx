@@ -261,7 +261,7 @@ function App() {
 
       <section id="about" className="about-section">
         <div className="about-label"><span className="eyebrow">ABOUT ME</span><span className="about-star">✳</span></div>
-        <div className="about-content"><h2>Richard Zhou<br/></h2><p><b>Computer Science student focused on UI/UX and user-centered design.</b> <br/> I like to cook, hike, play tennis and piano in my spare time. I have about 2 years of experience working at restaurants (both front of house and back of house) and at university I have taught Japanese and volunteered in various programs (predominantly to do giving food away).</p><a href="mailto:hello@example.com" className="text-link">A bit more about me <ArrowUpRight size={16}/></a></div>
+        <div className="about-content"><h2>Richard Zhou<br/></h2><p><b>Computer Science student focused on UI/UX and user-centered design.</b> <br/> I like to cook, hike, play tennis and piano in my spare time. I have about 2 years of experience working at restaurants (both front of house and back of house) and at university I have taught Japanese and volunteered in various programs (predominantly giving food/groceries away to those in need).</p><a href="mailto:hello@example.com" className="text-link">A bit more about me <ArrowUpRight size={16}/></a></div>
       </section>
     </main>
 
