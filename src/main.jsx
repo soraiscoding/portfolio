@@ -144,7 +144,7 @@ function SiteHeader({ detail, menuOpen, onToggleMenu, onNavigate }) {
 }
 
 function SiteFooter({ detail }) {
-  return <footer className="site-footer"><a className="wordmark" href={detail ? `${import.meta.env.BASE_URL}#top` : '#top'}>Richard Zhou</a><div><a href="mailto:hello@example.com">EMAIL</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div></footer>;
+  return <footer className="site-footer"><a className="wordmark" href={detail ? `${import.meta.env.BASE_URL}#top` : '#top'}>Richard Zhou</a></footer>;
 }
 
 function ImageGallery({ images }) {
@@ -261,7 +261,7 @@ function App() {
 
       <section id="about" className="about-section">
         <div className="about-label"><span className="eyebrow">ABOUT ME</span><span className="about-star">✳</span></div>
-        <div className="about-content"><h2>Richard Zhou<br/></h2><p><b>Computer Science student focused on UI/UX and user-centered design.</b> <br/> I like to cook, hike, play tennis and piano in my spare time. I have about 2 years of experience working at restaurants (both front of house and back of house) and at university I have taught Japanese and volunteered in various programs (predominantly giving food/groceries away to those in need).</p><a href="mailto:hello@example.com" className="text-link">A bit more about me <ArrowUpRight size={16}/></a></div>
+        <div className="about-content"><h2>Richard Zhou<br/></h2><p><b>Computer Science student focused on UI/UX and user-centered design.</b> <br/> I like to cook, hike, play tennis and piano in my spare time. I have about 2 years of experience working at restaurants (both front of house and back of house) and at university I have taught Japanese and volunteered in various programs (predominantly giving food/groceries away to those in need).</p></div>
       </section>
     </main>
 
